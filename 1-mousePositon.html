@@ -22,11 +22,11 @@
 
   <p>鼠标点击事件跟踪的例子</p>
   <p>获取鼠标x,y坐标</p>
+ <p>线上代码：https://codepen.io/railsbug/pen/OaOBem</p>
+ <p>这里用到了withLatestFrom 相当于combineLatest，解决了glitch问题</p>
   <div>
     <div id="text"></div>
   </div>
- <p>这里用到了withLatestFrom 相当于combineLatest，解决了glitch问题</p>
- <p>线上代码：https://codepen.io/railsbug/pen/OaOBem</p>
   <script>
     const event$ = Rx.Observable.fromEvent(document.body, 'click');
     const x$ = event$.map(e => e.x);
